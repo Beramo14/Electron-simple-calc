@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "electron": "^7.1.10"
+  },
+  "name": "Electron-simple-calc",
+  "version": "1.0.0",
+  "description": "Electron Simple Calculator",
+  "main": "index.js",
+  "repository": "https://github.com/Beramo14/Electron-simple-calc.git",
+  "author": "Beramo14 <aqaq556@naver.com>",
+  "license": "MIT"
+}
