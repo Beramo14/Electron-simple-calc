@@ -10,10 +10,13 @@
             width: 100vw;
             margin: 0;
         }
+        div#calc-output{
+            height: 29vh;
+            padding: 5px;
+        }
         div#calc-output-box{
             width: 100%;
-            height: 70px;
-            /* border: 1px solid #aaaaaa; */
+            height: 100%;
         }
         table#calc-buttons{
             width: 100%;
@@ -24,7 +27,7 @@
         }
         td{
             height: 12vh;
-            border: 1px solid #bbbbbb;
+            border: 1px solid #dddddd;
         }
         td.num{
             font-weight: bold;
@@ -54,39 +57,49 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="symbol clear" onclick="console.log(this.innerText)">C</td>
-                            <td class="symbol">+/-</td>
-                            <td class="symbol">%</td>
-                            <td class="symbol">÷</td>
+                            <td class="symbol clear" onclick="controlBtnHandler(this)">C</td>
+                            <td class="symbol" onclick="controlBtnHandler(this)">+/-</td>
+                            <td class="symbol" onclick="controlBtnHandler(this)">%</td>
+                            <td class="symbol" onclick="controlBtnHandler(this)">÷</td>
                         </tr>
                         <tr>
-                            <td class="num">7</td>
-                            <td class="num">8</td>
-                            <td class="num">9</td>
-                            <td class="symbol">x</td class="symbol">
+                            <td class="num" onclick="lnsertBtnHandler(this)">7</td>
+                            <td class="num" onclick="lnsertBtnHandler(this)">8</td>
+                            <td class="num" onclick="lnsertBtnHandler(this)">9</td>
+                            <td class="symbol" onclick="controlBtnHandler(this)">x</td>
                         </tr>
                         <tr>
-                            <td class="num">4</td>
-                            <td class="num">5</td>
-                            <td class="num">6</td>
-                            <td class="symbol">-</td class="symbol">
+                            <td class="num" onclick="lnsertBtnHandler(this)">4</td>
+                            <td class="num" onclick="lnsertBtnHandler(this)">5</td>
+                            <td class="num" onclick="lnsertBtnHandler(this)">6</td>
+                            <td class="symbol" onclick="controlBtnHandler(this)">-</td>
                         </tr>
                         <tr>
-                            <td class="num">1</td>
-                            <td class="num">2</td>
-                            <td class="num">3</td>
-                            <td class="symbol">+</td>
+                            <td class="num" onclick="lnsertBtnHandler(this)">1</td>
+                            <td class="num" onclick="lnsertBtnHandler(this)">2</td>
+                            <td class="num" onclick="lnsertBtnHandler(this)">3</td>
+                            <td class="symbol" onclick="controlBtnHandler(this)">+</td>
                         </tr>
                         <tr>
-                            <td class="num">0</td>
-                            <td class="num">00</td>
-                            <td class="num">.</td>
-                            <td class="symbol">=</td>
+                            <td class="num" onclick="lnsertBtnHandler(this)">0</td>
+                            <td class="num" onclick="lnsertBtnHandler(this)">00</td>
+                            <td class="num" onclick="lnsertBtnHandler(this)">.</td>
+                            <td class="symbol" onclick="controlBtnHandler(this)">=</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+
+    <script>
+        var
+        function controlBtnHandler(el){
+            console.log(el.innerText);
+        }
+        function lnsertBtnHandler(el){
+            console.log(el.innerText);
+        }
+    </script>
 </body>
 </html>
