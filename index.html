@@ -93,12 +93,36 @@
     </div>
 
     <script>
-        var
+        var result = 0;
+        var expression = "";
         function controlBtnHandler(el){
             console.log(el.innerText);
+            var input = el.innerText;
+
+            switch(input){
+                case "=":
+                    expressionCalc();
+                    break;
+                default:
+                    expression += input;
+                    displayExpression();
+            }
         }
+
         function lnsertBtnHandler(el){
             console.log(el.innerText);
+            var input = el.innerText;
+            expression += input;
+            displayExpression()
+        }
+
+        function expressionCalc(){
+            result = eval(expression);
+            document.getElementById('calc-output-box').innerText = result;
+        }
+
+        function displayExpression(){
+            document.getElementById('calc-output-box').innerText = expression;
         }
     </script>
 </body>
