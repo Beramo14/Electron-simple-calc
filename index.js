@@ -12,6 +12,8 @@ function createWindow(){
     //mainWindow.removeMenu();
 
     mainWindow.loadFile("./index.html");
+    //앱 실행시 계발자도구 open
+    mainWindow.openDevTools();
     mainWindow.on("closed", onclosed);
 }
 
